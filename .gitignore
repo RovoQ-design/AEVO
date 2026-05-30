@@ -1,0 +1,34 @@
+# Private / not for public sharing
+_private/
+
+# Claude Code tool config (local only)
+.claude/
+
+# Large dataset images (too big for GitHub — link to Roboflow instead)
+pcb_dataset/train/
+pcb_dataset/valid/
+pcb_dataset/test/
+
+# Raw zip download
+*.zip
+
+# Base model weights (downloaded automatically by ultralytics)
+yolov8n.pt
+yolo26n.pt
+
+# Training run artifacts (keep weights, skip redundant copies)
+runs/pcb_yolov8n/weights/best.onnx
+runs/pcb_yolov8n/weights/best_openvino_model/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

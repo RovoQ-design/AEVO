@@ -1,0 +1,96 @@
+{
+  "model": "claude-sonnet-4-6",
+  "decisions": [
+    {
+      "epoch": 5,
+      "learning_rate": 0.028812,
+      "action": "continue",
+      "value": null,
+      "reason": "Training shows a clear positive trend over the last 3 epochs with mAP50 improving from 0.5999 to 0.6788 and recall steadily increasing, indicating healthy convergence that should not be interrupted."
+    },
+    {
+      "epoch": 10,
+      "learning_rate": 0.027327,
+      "action": "continue",
+      "value": null,
+      "reason": "mAP50 shows a clear upward trend from 0.63 to 0.75 over the last 5 epochs with steadily decreasing validation losses, indicating healthy training progress."
+    },
+    {
+      "epoch": 15,
+      "learning_rate": 0.025842,
+      "action": "continue",
+      "value": null,
+      "reason": "Despite epoch-to-epoch fluctuations, mAP50 and mAP50-95 show no clear deteriorating trend over the last 5 epochs and training losses are stable, so no adjustment is warranted yet."
+    },
+    {
+      "epoch": 20,
+      "learning_rate": 0.024357,
+      "action": "continue",
+      "value": null,
+      "reason": "Although train losses show zero (likely frozen/pretrained layers), validation mAP50 oscillates around 0.72\u20130.75 without a clear diverging or plateauing trend over the last 5 epochs, so no adjustment is warranted yet."
+    },
+    {
+      "epoch": 25,
+      "learning_rate": 0.022872,
+      "action": "continue",
+      "value": null,
+      "reason": "Although train losses show zero (likely frozen/pretrained layers), validation metrics are stable with mAP50 fluctuating around 0.73\u20130.745 and val losses gently decreasing, indicating healthy training progress that warrants no intervention yet."
+    },
+    {
+      "epoch": 30,
+      "learning_rate": 0.021387,
+      "action": "continue",
+      "value": null,
+      "reason": "mAP50 and mAP50-95 are steadily improving over the last 5 epochs (0.7173\u21920.7516 and 0.4401\u21920.4717) with stable validation losses, indicating healthy training progress."
+    },
+    {
+      "epoch": 35,
+      "learning_rate": 0.019902,
+      "action": "reduce_lr",
+      "value": 0.5,
+      "reason": "Training losses are all zero (likely frozen/completed backbone) while validation mAP50 has declined from 0.7477 to 0.7224 over the last 5 epochs with no recovery, indicating the model is diverging on validation and needs a lower learning rate to stabilize."
+    },
+    {
+      "epoch": 40,
+      "learning_rate": 0.0092085,
+      "action": "continue",
+      "value": null,
+      "reason": "mAP50 is steadily improving across the last 5 epochs (0.7188\u21920.7369) with stable val losses, indicating healthy training progress that warrants no intervention."
+    },
+    {
+      "epoch": 45,
+      "learning_rate": 0.008466,
+      "action": "reduce_lr",
+      "value": 0.6,
+      "reason": "Training losses are zero (likely frozen/completed backbone) while mAP50 has plateaued around 0.735-0.739 for 5 epochs with no consistent improvement, suggesting a moderate LR reduction may help escape the plateau and improve validation metrics."
+    },
+    {
+      "epoch": 50,
+      "learning_rate": 0.0046341,
+      "action": "continue",
+      "value": null,
+      "reason": "mAP50 and mAP50-95 show slight upward trend over the last 5 epochs (0.7358\u21920.7389, 0.4566\u21920.4604) with stable validation losses, indicating healthy training progress that does not warrant intervention."
+    },
+    {
+      "epoch": 55,
+      "learning_rate": 0.0041886,
+      "action": "reduce_lr",
+      "value": 0.5,
+      "reason": "Training losses are zero (frozen/completed backbone) while mAP50 has steadily declined from 0.7375 to 0.7333 over 5 epochs, indicating the model is no longer improving and a learning rate reduction may help escape this plateau."
+    },
+    {
+      "epoch": 60,
+      "learning_rate": 0.0018716,
+      "action": "reduce_lr",
+      "value": 0.5,
+      "reason": "Training losses are zeroed out (likely frozen/completed backbone) while mAP50 has plateaued around 0.735 for 5+ epochs with no meaningful improvement, suggesting a learning rate reduction may help escape the plateau and refine validation performance."
+    },
+    {
+      "epoch": 60,
+      "learning_rate": 0.0009358,
+      "action": "continue",
+      "value": null,
+      "reason": "Validation losses are stable and mAP50 is holding around 0.73-0.75 with no divergence, indicating healthy training that should continue without intervention."
+    }
+  ]
+}

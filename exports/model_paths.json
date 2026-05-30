@@ -1,0 +1,9 @@
+{
+  "pytorch": "runs/pcb_yolov8n/weights/best.pt",
+  "onnx": "exports/pcb_yolov8n.onnx",
+  "openvino_fp16_dir": "exports/openvino_fp16",
+  "openvino_fp16_xml": "exports/openvino_fp16/best.xml",
+  "openvino_int8_dir": "exports/openvino_int8",
+  "openvino_int8_xml": "exports/openvino_int8/best_int8.xml",
+  "test_images": "pcb_dataset/test/images"
+}
